@@ -1,5 +1,5 @@
 QBCore = {}
-QBCore.Config = QBConfig
+QBCore.Config = FWConfig
 QBCore.Shared = QBShared
 QBCore.ClientCallbacks = {}
 QBCore.ServerCallbacks = {}
