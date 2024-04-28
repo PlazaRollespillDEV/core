@@ -163,8 +163,8 @@ RegisterNetEvent('Framework:Client:VehicleInfo', function(info)
     local plate = FW.Functions.GetPlate(info.vehicle)
     local hasKeys = true
 
-    if GetResourceState('qb-vehiclekeys') == 'started' then
-        hasKeys = exports['qb-vehiclekeys']:HasKeys()
+    if GetResourceState('vehiclekeys') == 'started' then
+        hasKeys = exports['vehiclekeys']:HasKeys()
     end
 
     local data = {
@@ -196,7 +196,7 @@ end)
 
 -- This event is exploitable and should not be used. It has been deprecated, and will be removed soon.
 RegisterNetEvent('Framework:Client:UseItem', function(item)
-    FW.Debug(string.format('%s triggered Framework:Client:UseItem by ID %s with the following data. This event is deprecated due to exploitation, and will be removed soon. Check qb-inventory for the right use on this event.', GetInvokingResource(), GetPlayerServerId(PlayerId())))
+    FW.Debug(string.format('%s triggered Framework:Client:UseItem by ID %s with the following data. This event is deprecated due to exploitation, and will be removed soon. Check inventory for the right use on this event.', GetInvokingResource(), GetPlayerServerId(PlayerId())))
     FW.Debug(item)
 end)
 
